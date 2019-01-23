@@ -5,7 +5,7 @@
   </div>
   <div class="col-md-8">
 
-    <%= form_with(model: [@listing, @order], local: true) do |form| %>
+    <%= form_with(model: [@listing, @order], id: "new_order", class: "new_order", local: true) do |form| %>
       <% if order.errors.any? %>
         <div id="error_explanation" class="alert alert-danger alert-dismissable">
           <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
@@ -18,6 +18,10 @@
           </ul>
         </div>
       <% end %>
+
+      <div id="stripe_error" class="alert alert-danger" style="display:none">
+        <noscript>JavaScript is not enabled and is required for this form. First enable it in your web browser settings.</noscript>
+      </div>
 
       <div class="form-group">
         <%= form.label :address %>
