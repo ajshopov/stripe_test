@@ -42,6 +42,7 @@ gem 'sassc-rails', '>= 2.0.0'
 gem 'jquery-rails'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
 gem 'devise', '~> 4.2'
+gem 'stripe'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
